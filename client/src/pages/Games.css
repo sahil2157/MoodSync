@@ -1,0 +1,50 @@
+.game-card{ display:flex; gap:18px; align-items:flex-start; transition:transform .15s ease; position:relative; }
+.game-card:hover{ transform:translateY(-4px); }
+.game-card.recommended{ border-color:var(--sage); box-shadow:0 0 0 2px var(--sage) inset; }
+.game-icon{ font-size:1.6rem; width:52px; height:52px; border-radius:14px; background:var(--bg); color:var(--sage); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.recommended-tag{
+  position:absolute; top:-11px; left:20px; background:var(--sage); color:#fff;
+  font-size:0.72rem; font-weight:700; padding:4px 12px; border-radius:var(--radius-pill);
+}
+
+.game-arena{ min-height:340px; display:flex; align-items:center; justify-content:center; padding:32px; }
+
+/* Memory Match */
+.memory-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; max-width:420px; margin:0 auto; }
+.memory-card{
+  aspect-ratio:1; font-size:1.8rem; border-radius:14px; border:1px solid var(--line);
+  background:var(--bg); cursor:pointer; display:flex; align-items:center; justify-content:center;
+  transition:transform .2s ease, background .2s ease;
+}
+.memory-card.flipped{ background:var(--surface); transform:scale(1.03); }
+.memory-card.matched{ background:var(--sage); color:#fff; opacity:0.85; }
+
+/* Reaction Challenge */
+.reaction-target{
+  width:220px; height:220px; border-radius:50%; border:none; font-weight:800; font-size:1.1rem;
+  color:#fff; cursor:pointer; transition:background .15s ease;
+  background:var(--text-soft);
+}
+.reaction-target.idle{ background:var(--sage); }
+.reaction-target.waiting{ background:var(--coral-dim); }
+.reaction-target.ready{ background:var(--sage); animation:reaction-pop .3s ease; }
+.reaction-target.tooSoon{ background:var(--mood-angry); }
+.reaction-target.done{ background:var(--text-soft); }
+@keyframes reaction-pop{ from{ transform:scale(0.9);} to{ transform:scale(1);} }
+
+/* Word Scramble */
+.scramble-word{
+  font-family:var(--font-display); font-size:2.4rem; letter-spacing:0.15em; padding:16px 32px;
+  border-radius:16px; background:var(--bg); border:1px solid var(--line); transition:background .2s ease;
+}
+.scramble-word.correct{ background:var(--sage); color:#fff; }
+.scramble-word.wrong{ background:var(--mood-angry); color:#fff; }
+
+/* Quick Quiz */
+.quiz-option{
+  padding:14px 18px; border-radius:14px; border:1px solid var(--line); background:var(--bg);
+  color:var(--text); font-weight:600; cursor:pointer; text-align:left; transition:background .15s ease;
+}
+.quiz-option:hover:not(:disabled){ background:var(--surface); }
+.quiz-option.correct{ background:var(--sage); color:#fff; border-color:var(--sage); }
+.quiz-option.wrong{ background:var(--mood-angry); color:#fff; border-color:var(--mood-angry); }

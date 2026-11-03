@@ -1,0 +1,43 @@
+.sidebar{
+  width:250px; flex-shrink:0; background:var(--surface); border-right:1px solid var(--line);
+  display:flex; flex-direction:column; padding:24px 16px; position:sticky; top:0; height:100vh;
+}
+.sidebar-brand{ display:flex; align-items:center; gap:10px; padding:0 8px 24px; }
+.brand-mark{
+  width:36px; height:36px; border-radius:12px; background:linear-gradient(135deg,var(--sage),var(--coral));
+  color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; font-family:var(--font-display);
+}
+.brand-name{ font-family:var(--font-display); font-weight:600; font-size:1.15rem; }
+.sidebar-nav{ display:flex; flex-direction:column; gap:2px; flex:1; overflow-y:auto; }
+.sidebar-link{
+  display:flex; align-items:center; gap:12px; padding:11px 12px; border-radius:12px;
+  color:var(--text-soft); font-weight:600; font-size:0.92rem; transition:background .15s ease, color .15s ease;
+}
+.sidebar-link:hover{ background:var(--bg); color:var(--text); }
+.sidebar-link.active{ background:var(--sage); color:#fff; }
+.sidebar-link.admin-link{ color:var(--coral-dim); }
+.sidebar-link.admin-link.active{ background:var(--coral); color:#fff; }
+.sidebar-icon{ font-size:1.15rem; flex-shrink:0; }
+.theme-toggle{ display:flex; align-items:center; gap:8px; width:100%; justify-content:flex-start; }
+.logout-btn{ display:inline-flex; align-items:center; gap:6px; padding:0; font-size:0.8rem; }
+.sidebar-footer{ border-top:1px solid var(--line); padding-top:16px; display:flex; flex-direction:column; gap:12px; }
+.sidebar-user{ display:flex; align-items:center; gap:10px; padding:0 8px; }
+.user-avatar{
+  width:34px; height:34px; border-radius:50%; color:#fff; display:flex; align-items:center;
+  justify-content:center; font-weight:700; flex-shrink:0;
+}
+.user-name{ font-weight:700; font-size:0.88rem; }
+
+.bottom-tabs{ display:none; }
+
+@media (max-width: 880px){
+  .sidebar{ display:none; }
+  .bottom-tabs{
+    display:flex; position:fixed; bottom:0; left:0; right:0; background:var(--surface);
+    border-top:1px solid var(--line); justify-content:space-around; padding:10px 4px;
+    z-index:50;
+  }
+  .tab-link{ font-size:1.3rem; padding:6px 10px; border-radius:10px; color:var(--text-soft); display:flex; }
+  .tab-link.active{ background:var(--sage); color:#fff; }
+  .page{ padding-bottom:110px; }
+}

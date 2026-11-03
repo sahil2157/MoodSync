@@ -1,0 +1,16 @@
+.auth-page{
+  min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px;
+  background:var(--bg);
+}
+.auth-card{
+  width:100%; max-width:420px; background:var(--surface); border:1px solid var(--line);
+  border-radius:var(--radius-card); padding:36px; box-shadow:var(--shadow-soft);
+}
+.auth-brand{ display:flex; align-items:center; gap:10px; margin-bottom:24px; }
+.auth-brand .brand-mark{
+  width:36px; height:36px; border-radius:12px; background:linear-gradient(135deg,var(--sage),var(--coral));
+  color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; font-family:var(--font-display);
+}
+.auth-brand .brand-name{ font-family:var(--font-display); font-weight:600; font-size:1.15rem; }
+.auth-switch{ text-align:center; margin-top:18px; font-size:0.9rem; color:var(--text-soft); }
+.auth-switch a{ color:var(--sage-dim); font-weight:700; }

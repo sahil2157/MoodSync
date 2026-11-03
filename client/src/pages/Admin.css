@@ -1,0 +1,51 @@
+.admin-filters{
+  display:flex; gap:10px; flex-wrap:wrap; margin-bottom:20px; align-items:center;
+}
+.admin-search{
+  display:flex; align-items:center; gap:8px; flex:1; min-width:220px;
+  border:1px solid var(--line); border-radius:var(--radius-pill); padding:9px 16px;
+  background:var(--bg); color:var(--text-soft);
+}
+.admin-search input{
+  border:none; background:transparent; outline:none; color:var(--text); flex:1; font-family:inherit; font-size:0.92rem;
+}
+.admin-filters select{
+  padding:9px 14px; border-radius:var(--radius-pill); border:1px solid var(--line);
+  background:var(--bg); color:var(--text); font-family:inherit; font-size:0.88rem;
+}
+
+.admin-table-wrap{ overflow-x:auto; }
+.admin-table{ width:100%; border-collapse:collapse; font-size:0.88rem; min-width:720px; }
+.admin-table th{
+  text-align:left; padding:10px 12px; color:var(--text-soft); font-weight:700;
+  border-bottom:2px solid var(--line); white-space:nowrap;
+}
+.admin-table td{ padding:12px; border-bottom:1px solid var(--line); vertical-align:middle; }
+.admin-table tr.row-disabled{ opacity:0.55; }
+
+.you-tag{
+  margin-left:8px; font-size:0.68rem; font-weight:700; background:var(--bg);
+  color:var(--text-soft); padding:2px 8px; border-radius:var(--radius-pill); border:1px solid var(--line);
+}
+
+.role-pill, .status-pill{
+  display:inline-block; padding:4px 12px; border-radius:var(--radius-pill); font-size:0.75rem; font-weight:700;
+}
+.role-pill.admin{ background:var(--coral); color:#fff; }
+.role-pill.user{ background:var(--bg); color:var(--text-soft); border:1px solid var(--line); }
+.status-pill.active{ background:var(--sage); color:#fff; }
+.status-pill.disabled{ background:var(--mood-angry); color:#fff; }
+
+.admin-actions{ display:flex; gap:6px; }
+.icon-btn{
+  border:1px solid var(--line); background:var(--bg); color:var(--text-soft);
+  width:34px; height:34px; border-radius:10px; display:flex; align-items:center; justify-content:center;
+  cursor:pointer; transition:background .15s ease, color .15s ease;
+}
+.icon-btn:hover:not(:disabled){ background:var(--surface); color:var(--text); }
+.icon-btn:disabled{ opacity:0.4; cursor:not-allowed; }
+.icon-btn.danger:hover:not(:disabled){ color:#fff; background:var(--mood-angry); border-color:var(--mood-angry); }
+
+.admin-pagination{
+  display:flex; align-items:center; justify-content:center; gap:16px; margin-top:20px;
+}
